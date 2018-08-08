@@ -7,7 +7,7 @@ def home_route():
 
 @app.route('/hello')
 @app.route('/hello/<string:name>')
-def hello_route(name):
+def hello_route(name="Default Name"):
     return render_template('hello_with_link.html', n=name)
 
 app.run(debug=True)
